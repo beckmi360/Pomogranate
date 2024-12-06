@@ -1,0 +1,115 @@
+*{
+    box-sizing: border-box;
+}
+html{
+    border: none;
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    background-color: rgb(16, 20, 16);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-sml{
+    height: 13px;
+    background-color: rgb(27, 7, 7);
+    width: 83%;
+    border: 1px solid rgb(212, 145, 67);
+    border-width: 0px 1px 0px 1px;
+}
+.banner-md{
+    height: 20px;
+    background-color: rgb(39, 10, 10);
+    width: 96%;
+    border: 1px solid rgb(212, 145, 67);
+}
+.banner-lrg{
+    height: 30px;
+    background-color: rgb(39, 10, 10);
+    width: 100%;
+    border: 1px solid rgb(212, 145, 67);
+}
+
+#page-content{
+    background-color: rgb(20, 5, 5);
+    width: 93%;
+    border: 1px solid rgb(141, 91, 34);
+    border-width: 0px 1px;
+}
+
+#content-wrapper{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0% 0%;
+}
+
+#timer-container{
+    width:100%;
+    margin:3%;
+}
+#timer-container h1 {
+    background-color: rgb(209, 140, 49);
+    margin-top: 2%;
+    margin-bottom: 0;
+    color: rgb(20, 5, 5);
+    width: 96%;
+    padding-left: 3%;
+    margin-left:2%;
+    text-align:center;
+    border-radius:5px;
+}
+
+#clock-container {
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.uni-bar{
+    color: rgb(199, 161, 79);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    margin-top: 1%;
+}
+.uni-bar hr{
+    width: 40%;
+    color: rgb(199, 161, 79);
+    margin: 0%;
+}
+.uni-bar #center{
+    margin: 2%;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: rgb(209, 140, 49);
+    border: none;
+    color: rgb(20, 5, 5);
+    cursor: pointer;
+    min-width: 25%;
+    border-radius: 5px;
+}
+button:hover {
+    background-color: rgb(255, 189, 47);
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+#timer-hand {
+    transform-origin: 50px 50px;
+    animation: rotate 5s linear paused;
+}
+

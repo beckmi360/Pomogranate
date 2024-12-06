@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Home</title>
+    </head>
+    <body>
+        <!-- Decorative Blocks -->
+        <div class="banner-lrg"></div>
+        <div class="banner-sml"></div>
+        <div class="banner-md"></div>
+
+        <div id="page-content">
+                <div id="content-wrapper">
+                    <div id="timer-container">
+                        <h1 id="session-type">Pomogranate</h1>
+                        <div id="clock-container">
+                            <!-- Clock SVG Generation -->
+                            <svg id="clock-face" viewBox="0 0 100 100">
+                                <circle 
+                                    cx="50" 
+                                    cy="50" 
+                                    r="45" 
+                                    fill="none" 
+                                    stroke="rgb(212, 145, 67)" 
+                                    stroke-width="2"
+                                />
+                                <line 
+                                    id="timer-hand" 
+                                    x1="50" 
+                                    y1="50" 
+                                    x2="50" 
+                                    y2="10" 
+                                    stroke="rgb(255, 189, 47)" 
+                                    stroke-width="2" 
+                                    stroke-linecap="round"
+                                />
+                                <line 
+                                    x1="50" 
+                                    y1="5" 
+                                    x2="50" 
+                                    y2="10" 
+                                    stroke="rgb(212, 145, 67)" 
+                                    stroke-width="2" 
+                                />
+                                <line 
+                                    x1="95" 
+                                    y1="50" 
+                                    x2="90" 
+                                    y2="50" 
+                                    stroke="rgb(212, 145, 67)" 
+                                    stroke-width="2" 
+                                />
+                                <line 
+                                    x1="50" 
+                                    y1="95" 
+                                    x2="50" 
+                                    y2="90" 
+                                    stroke="rgb(212, 145, 67)" 
+                                    stroke-width="2" 
+                                />
+                                <line 
+                                    x1="5" 
+                                    y1="50" 
+                                    x2="10" 
+                                    y2="50" 
+                                    stroke="rgb(212, 145, 67)" 
+                                    stroke-width="2" 
+                                />
+                            </svg>
+                        </div>
+
+                        <!-- <div id="timer">05</div> -->
+                        <div class="uni-bar">
+                            <hr>
+                            <span id="center">●</span>
+                            <hr>
+                        </div>
+                        <div style="text-align: center; width:100%; display:flex; justify-content:space-evenly;">
+                            <button id="start-btn">Begin</button>
+                            <button id="reset-btn">Quit</button>
+                        </div>
+                        <div class="uni-bar">
+                            <hr>
+                            <span id="center">●</span>
+                            <hr>
+                        </div>
+                    </div>  
+                </div>
+        </div>
+
+        <!-- Decorative Blocks -->
+        <div class="banner-md"></div>
+        <div class="banner-sml"></div>
+        <div class="banner-lrg"></div>
+
+        <!-- Javascript link to the main timing functions -->
+        <script src="js/script.js"></script>
+    </body>
+</html>
