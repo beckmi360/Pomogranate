@@ -3,7 +3,7 @@ const startBtn = document.getElementById('start-btn');
 const resetBtn = document.getElementById('reset-btn');
 const timerHand = document.getElementById('timer-hand');
 
-const WORK_DURATION = 5; // 5 seconds for testing
+const WORK_DURATION = 25; // 5 seconds for testing
 let timeLeft = WORK_DURATION;
 let isRunning = false;
 let intervalId;
@@ -38,6 +38,19 @@ function resetTimer() {
     timeLeft = WORK_DURATION;
     timerHand.style.animation = 'none';
     sessionType.textContent = 'Pomogranate';
+
+    // Send a request to the server to record the session completion
+    fetch('/api/sessions', { method: 'POST' })
+        .then(response => {
+            if (response.ok) {
+                console.log('Session completion recorded');
+            } else {
+                console.error('Failed to record session completion');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
 }
 
 startBtn.addEventListener('click', startTimer);
